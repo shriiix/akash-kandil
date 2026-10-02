@@ -9,25 +9,28 @@ a{color:inherit;text-decoration:none}
 section{padding:80px 0}
 .progress{position:fixed;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--rose));transform-origin:0 50%;z-index:50}
 .nav{position:sticky;top:0;z-index:20;background:rgba(21,11,48,.8);backdrop-filter:blur(10px)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;min-height:62px;gap:12px}
 .logo{font-family:'Yatra One',serif;font-size:22px;color:var(--flame)}
-.nav nav{display:flex;gap:22px;align-items:center;font-weight:600}
+.nav nav{display:flex;gap:clamp(10px,2vw,22px);align-items:center;font-weight:600}
 .nav nav a:not(.btn){opacity:.8;transition:opacity .2s,color .2s}.nav nav a:not(.btn):hover{opacity:1;color:var(--flame)}
 @media(max-width:620px){.nav nav a:not(.cta){display:none}}
+@media(max-width:360px){.logo{font-size:19px}.nav .btn.cta{padding:7px 12px;font-size:14px}}
 .btn{display:inline-flex;align-items:center;border:0;cursor:pointer;font:700 16px Mukta,sans-serif;padding:12px 24px;border-radius:999px;background:var(--gold);color:#2A1500;box-shadow:0 0 0 rgba(245,165,36,0);transition:box-shadow .3s}
 .btn:hover{box-shadow:0 8px 28px rgba(245,165,36,.45)}
 .btn.cta{padding:8px 18px}
 .btn.wa{background:var(--wa);color:#04210F;justify-content:center}
-.hero{position:relative;padding:50px 0 100px;text-align:center;overflow:hidden;background:radial-gradient(ellipse at 50% 0%,#3B1F72 0%,var(--night) 70%)}
+.hero{position:relative;padding:clamp(30px,7vw,50px) 0 clamp(64px,12vw,100px);text-align:center;overflow:hidden;background:radial-gradient(ellipse at 50% 0%,#3B1F72 0%,var(--night) 70%)}
 .hero .wrap{position:relative;z-index:2}
-.string{display:flex;justify-content:center;gap:clamp(10px,4vw,50px);align-items:flex-start;height:230px;perspective:900px;transform-style:preserve-3d}
+.string{display:flex;justify-content:center;gap:clamp(4px,4vw,50px);align-items:flex-start;height:clamp(145px,30vw,230px);perspective:900px;transform-style:preserve-3d}
 .string>div{transform-style:preserve-3d}
+.hero .string .lamp{width:clamp(42px,16vw,78px);height:auto}
 .sway{transform-origin:50% 0;animation:sway 4s ease-in-out infinite}
 @keyframes sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
 .lamp{filter:drop-shadow(0 0 16px rgba(255,190,80,.6))}
 .hero h1{font-size:clamp(40px,9vw,84px);color:var(--flame);margin:18px 0 12px;text-shadow:0 0 40px rgba(255,210,122,.45);perspective:600px}
 .mask{display:inline-block;overflow:hidden;vertical-align:top}.mask>span{display:inline-block}
 .hero p{max-width:520px;margin:0 auto 28px;color:var(--mute)}
+@media(max-width:620px){.string{gap:clamp(2px,1.6vw,10px);height:clamp(140px,42vw,210px)}.hero h1{font-size:clamp(38px,11vw,64px)}.hero p{max-width:36rem;padding:0 8px}}
 .ember{position:absolute;bottom:-10px;border-radius:50%;background:var(--flame);box-shadow:0 0 10px 2px var(--gold);opacity:0;animation:rise linear infinite;z-index:1}
 @keyframes rise{0%{transform:translateY(0) translateX(0);opacity:0}10%{opacity:.9}100%{transform:translateY(-110vh) translateX(40px);opacity:0}}
 .h2{font-size:clamp(30px,5vw,44px);color:var(--flame);margin-bottom:8px}
