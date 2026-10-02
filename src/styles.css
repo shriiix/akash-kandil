@@ -17,7 +17,7 @@ section{padding:80px 0}
 @media(max-width:360px){.logo{font-size:19px}.nav .btn.cta{padding:7px 12px;font-size:14px}}
 .btn{display:inline-flex;align-items:center;border:0;cursor:pointer;font:700 16px Mukta,sans-serif;padding:12px 24px;border-radius:999px;background:var(--gold);color:#2A1500;box-shadow:0 0 0 rgba(245,165,36,0);transition:box-shadow .3s}
 .btn:hover{box-shadow:0 8px 28px rgba(245,165,36,.45)}
-.btn.cta{padding:8px 18px}
+.btn.cta{padding:8px 18px;white-space:nowrap;flex-shrink:0}
 .btn.wa{background:var(--wa);color:#04210F;justify-content:center}
 .hero{position:relative;padding:clamp(30px,7vw,50px) 0 clamp(64px,12vw,100px);text-align:center;overflow:hidden;background:radial-gradient(ellipse at 50% 0%,#3B1F72 0%,var(--night) 70%)}
 .hero .wrap{position:relative;z-index:2}

@@ -1,6 +1,6 @@
 // ====== EDIT THESE ======
 export const WHATSAPP = "+918554070686"; // country code + number, no + or spaces
-export const BRAND = "Diwali Akash Kandil";
+export const BRAND = "Akash Kandil";
 export const PRODUCTS = [
   { id: 1, name: "Classic Paper Kandil", desc: "Traditional pleated lantern in bright festive colours.", price: 199, color: ["#F5A524", "#E0457B"], tag: "Bestseller" },
   { id: 2, name: "Star Kandil", desc: "Five-point star that lights up your balcony.", price: 299, color: ["#FFD27A", "#F5A524"] },
